@@ -1,3 +1,8 @@
+<form name="subscribe" method="POST" data-netlify="true" action="/thank-you.html">
+  <input type="hidden" name="form-name" value="subscribe">
+  <!-- Your form fields here -->
+</form>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
