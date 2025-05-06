@@ -126,6 +126,14 @@
   <input type="hidden" name="form-name" value="newsletter" />
   <!-- Add your form fields here -->
 </form>
+<form name="newsletter" method="POST" action="https://hooks.zapier.com/hooks/catch/XXXXXXX/XXXXXXX">
+  <input type="hidden" name="form-name" value="newsletter">
+  <label for="name">Name</label>
+  <input type="text" name="name" id="name" required>
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email" required>
+  <button type="submit">Subscribe</button>
+</form>
 <!DOCTYPE html>
 <html lang="en">
 <head>
