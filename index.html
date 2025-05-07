@@ -228,10 +228,26 @@
     &copy; 2025 New Vaccine Breakthroughs · Built with care for the global health community
   </footer>
 </body>
-</html>
+<!-- your HTML content -->
+
+<form name="newsletter" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="newsletter" />
+  <input type="text" name="name" required />
+  <input type="email" name="email" required />
+
+  <!-- New hidden field -->
+  <input type="hidden" name="date_submitted" id="date_submitted" />
+
+  <button type="submit">Subscribe</button>
+</form>
+
+<!-- Add script before this closing body tag -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const now = new Date().toISOString();
     document.getElementById("date_submitted").value = now;
   });
 </script>
+</body>
+</html>
+  
