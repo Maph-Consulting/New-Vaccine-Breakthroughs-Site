@@ -7,58 +7,82 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f3f4f6;
-      color: #111827;
+      font-family: 'Roboto', sans-serif;
+      background: #f0f4f8;
+      color: #333;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+    .container {
+      background: #fff;
+      padding: 2.5rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 480px;
       text-align: center;
-      padding: 2rem;
     }
-
-    .thank-you-box {
-      background: #ffffff;
-      padding: 3rem;
-      border-radius: 1rem;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
+    .logo {
+      margin-bottom: 1.5rem;
     }
-
+    .logo img {
+      height: 60px;
+    }
     h1 {
-      color: #1d4ed8;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      margin: 0 0 0.5rem;
+      color: #1a237e;
     }
-
-    p {
-      font-size: 1.125rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
+    p.lead {
+      font-size: 1.1rem;
+      margin: 0 0 1.5rem;
+      color: #555;
     }
-
-    a.button {
+    .btn {
       display: inline-block;
-      margin-top: 1rem;
-      background: #1d4ed8;
-      color: white;
       padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
+      margin: 0.5rem;
+      background: #1a237e;
+      color: #fff;
       text-decoration: none;
-      font-weight: 600;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.2s;
     }
-
-    a.button:hover {
-      background: #2563eb;
+    .btn:hover {
+      background: #3949ab;
+    }
+    .social {
+      margin-top: 1.5rem;
+    }
+    .social a {
+      margin: 0 0.5rem;
+      color: #1a237e;
+      text-decoration: none;
+      font-size: 1.25rem;
     }
   </style>
 </head>
+
 <body>
-  <div class="thank-you-box">
+  <div class="container">
+    <div class="logo">
+      <!-- Replace 'logo.png' with your actual logo path -->
+      <img src="logo.png" alt="New Vaccine Breakthroughs">
+    </div>
     <h1>Thank You for Subscribing!</h1>
-    <p>You’ve successfully joined the <strong>New Vaccine Breakthroughs</strong> community.</p>
-    <p>Stay tuned for the latest updates in vaccine science, innovation, and breakthroughs.</p>
-    <a href="/" class="button">Return to Home</a>
+    <p class="lead">
+      You’re now part of the <strong>New Vaccine Breakthroughs</strong> community.  
+      We’ll send you the latest insights and updates as soon as they're released.
+    </p>
+    <a href="/" class="btn">Return to Home</a>
+    <a href="#breakthroughs" class="btn">Browse Issues</a>
+    <div class="social">
+      <!-- Example: LinkedIn icon font or emoji -->
+      <a href="https://www.linkedin.com/newsletters/new-vaccine-breakthroughs-7153683097646899200/" target="_blank" title="Follow on LinkedIn">🔗 LinkedIn</a>
+    </div>
   </div>
 </body>
 </html>
