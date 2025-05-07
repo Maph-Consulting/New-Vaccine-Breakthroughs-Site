@@ -133,6 +133,38 @@
   <label for="email">Email</label>
   <input type="email" name="email" id="email" required>
   <button type="submit">Subscribe</button>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subscribe to New Vaccine Breakthroughs</title>
+</head>
+<body>
+  <h2>Subscribe to Our Newsletter</h2>
+  <form name="newsletter" method="POST" data-netlify="true">
+    <label for="name">Name:</label><br/>
+    <input type="text" id="name" name="name" required><br/><br/>
+
+    <label for="email">Email:</label><br/>
+    <input type="email" id="email" name="email" required><br/><br/>
+
+    <label for="date_submitted">Date Submitted:</label><br/>
+    <input type="text" id="date_submitted" name="date_submitted" readonly><br/><br/>
+
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const dateField = document.getElementById("date_submitted");
+      const now = new Date();
+      const formattedDate = now.toISOString(); // Format: 2025-05-07T14:22:00Z
+      dateField.value = formattedDate;
+    });
+  </script>
+</body>
+</html>
 </form>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
@@ -236,35 +268,3 @@
     &copy; 2025 New Vaccine Breakthroughs · Built with care for the global health community
   </footer>
 </body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Subscribe to New Vaccine Breakthroughs</title>
-</head>
-<body>
-  <h2>Subscribe to Our Newsletter</h2>
-  <form name="newsletter" method="POST" data-netlify="true">
-    <label for="name">Name:</label><br/>
-    <input type="text" id="name" name="name" required><br/><br/>
-
-    <label for="email">Email:</label><br/>
-    <input type="email" id="email" name="email" required><br/><br/>
-
-    <label for="date_submitted">Date Submitted:</label><br/>
-    <input type="text" id="date_submitted" name="date_submitted" readonly><br/><br/>
-
-    <button type="submit">Subscribe</button>
-  </form>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const dateField = document.getElementById("date_submitted");
-      const now = new Date();
-      const formattedDate = now.toISOString(); // Format: 2025-05-07T14:22:00Z
-      dateField.value = formattedDate;
-    });
-  </script>
-</body>
-</html>
