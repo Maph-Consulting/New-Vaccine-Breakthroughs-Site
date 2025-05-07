@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Subscribe to Newsletter</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    form { background: white; padding: 20px; border-radius: 8px; max-width: 400px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    label { display: block; margin-top: 10px; }
+    input[type="text"], input[type="email"] {
+      width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ccc; border-radius: 4px;
+    }
+    input[type="submit"] {
+      margin-top: 20px; padding: 10px 15px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <form name="newsletter" method="POST" action="https://hooks.zapier.com/hooks/catch/22802972/2n6ziul/">
+    <h2>Subscribe to New Vaccine Breakthroughs</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="dateSubmitted">Date Submitted:</label>
+    <input type="text" name="dateSubmitted" id="dateSubmitted" readonly>
+
+    <input type="submit" value="Subscribe">
+  </form>
+
+  <script>
+    // Set the current date on load
+    document.addEventListener("DOMContentLoaded", function () {
+      const now = new Date();
+      const formatted = now.toISOString();
+      document.getElementById("dateSubmitted").value = formatted;
+    });
+  </script>
+
+</body>
+</html>
