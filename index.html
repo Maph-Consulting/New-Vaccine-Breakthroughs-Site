@@ -133,20 +133,6 @@
   <label for="email">Email</label>
   <input type="email" name="email" id="email" required>
   <button type="submit">Subscribe</button>
-  <form name="newsletter" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="newsletter" />
-
-  <label for="name">Name:</label>
-  <input type="text" name="name" required>
-
-  <label for="email">Email:</label>
-  <input type="email" name="email" required>
-
-  <!-- Hidden field for date submitted -->
-  <input type="hidden" name="date_submitted" id="date_submitted" />
-
-  <button type="submit">Subscribe</button>
-</form>
 </form>
 <!DOCTYPE html>
 <html lang="en">
@@ -156,6 +142,12 @@
   <title>New Vaccine Breakthroughs</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const now = new Date().toISOString();
+    document.getElementById("date_submitted").value = now;
+  });
+</script>
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
