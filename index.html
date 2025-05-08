@@ -167,6 +167,26 @@
   <title>Subscribe to New Vaccine Breakthroughs</title>
 </head> 
 <body> 
+<form name="newsletter" method="POST" action="https://hooks.zapier.com/hooks/catch/22802972/2n6ziul/">
+  <h2>Subscribe to New Vaccine Breakthroughs</h2>
+
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" name="email" id="email" required>
+  
+  <input type="hidden" name="date_submitted" id="date_submitted" value="2025-05-07T17:32:45.123Z">
+  <input type="submit" value="Subscribe">
+</form>
+  
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const now = new Date().toISOString();
+    document.getElementById("date_submitted").value = now;
+  });
+</script>
+</body> 
 <div class="subscribe-card">
   <h2>Join Our Community</h2>
   <form id="newsletterForm">
@@ -205,26 +225,6 @@
     }
   });
 </script>
-<form name="newsletter" method="POST" action="https://hooks.zapier.com/hooks/catch/22802972/2n6ziul/">
-  <h2>Subscribe to New Vaccine Breakthroughs</h2>
-
-  <label for="name">Name:</label>
-  <input type="text" name="name" id="name" required>
-
-  <label for="email">Email:</label>
-  <input type="email" name="email" id="email" required>
-  
-  <input type="hidden" name="date_submitted" id="date_submitted" value="2025-05-07T17:32:45.123Z">
-  <input type="submit" value="Subscribe">
-</form>
-  
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const now = new Date().toISOString();
-    document.getElementById("date_submitted").value = now;
-  });
-</script>
-</body>
 </html>
 
 </form>
