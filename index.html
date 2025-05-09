@@ -93,21 +93,25 @@
     📄 Read Now
   </a>
 </div> 
-    <!-- Past Issues Card -->
+<!-- Past Issues Dropdown Card -->
 <div class="issue-card" style="background: white; padding: 20px; border-radius: 12px; width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
   <h3 style="color: #1976d2;">Past Issues</h3>
-  <ul style="list-style: none; padding: 0; margin: 0;">
-    <li style="margin-bottom: 10px;">
-      <a href="March-2025-Newsletter.pdf" target="_blank" style="color: #1976d2; text-decoration: none;">March 2025 – Next weapons against fatal diarrheal disease </a>
-    </li>
-    <li style="margin-bottom: 10px;">
-      <a href="February-2025-Newsletter.pdf" target="_blank" style="color: #1976d2; text-decoration: none;">February 2025 – Measles Resurgence & Responses</a>
-    </li>
-    <li>
-      <a href="January-2025-Newsletter.pdf" target="_blank" style="color: #1976d2; text-decoration: none;">January 2025 – Top 2024 Vaccine Advances</a>
-    </li>
-  </ul>
+  <label for="past-issues" style="display: block; margin-bottom: 10px; color: #333;">Select a past issue:</label>
+  <select id="past-issues" onchange="openIssue(this.value)" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+    <option value="">-- Choose an issue --</option>
+    <option value="March-2025-Newsletter.pdf">March 2025 – Innovations in RSV Vaccines</option>
+    <option value="February-2025-Newsletter.pdf">February 2025 – Measles Resurgence & Responses</option>
+    <option value="January-2025-Newsletter.pdf">January 2025 – Top 2024 Vaccine Advances</option>
+  </select>
 </div>
+<script>
+  function openIssue(url) {
+    if (url) {
+      window.open(url, '_blank');
+    }
+  }
+</script>
+
  
    <div class="section">
       <h2>📬 Read the Latest Edition</h2>
