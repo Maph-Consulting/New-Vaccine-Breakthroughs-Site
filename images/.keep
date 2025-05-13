@@ -1,0 +1,27 @@
+<!-- Vaccine Learning Hub Section -->
+<section style="padding: 40px; background-color: #f7f9fc;">
+  <h2 style="text-align: center; color: #1976d2;">🧠 Vaccine Learning Hub</h2>
+  <p style="text-align: center; max-width: 700px; margin: auto; font-size: 16px; color: #555;">
+    Explore curated infographics, slide decks, and guides to support learning and communication about vaccine science.
+  </p>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px;">
+    <!-- Resource Card 1 -->
+    <div style="background: white; padding: 20px; border-radius: 12px; width: 280px; box-shadow: 0 4px 8px rgba(0,0,0,0.08); text-align: center;">
+      <img src="images/icon-infographic.png" alt="Infographic Icon" style="width: 60px; margin-bottom: 15px;">
+      <h3 style="color: #1976d2; font-size: 18px;">What is Immunobridging?</h3>
+      <p style="font-size: 14px; color: #555;">Download our quick infographic to understand how vaccines get approved without large trials.</p>
+      <a href="resources/immunobridging-infographic.pdf" download style="display: inline-block; margin-top: 12px; padding: 10px 16px; background-color: #1976d2; color: white; text-decoration: none; border-radius: 6px;">Download</a>
+    </div>
+
+    <!-- Resource Card 2 -->
+    <div style="background: white; padding: 20px; border-radius: 12px; width: 280px; box-shadow: 0 4px 8px rgba(0,0,0,0.08); text-align: center;">
+      <img src="images/icon-pdf.png" alt="PDF Icon" style="width: 60px; margin-bottom: 15px;">
+      <h3 style="color: #1976d2; font-size: 18px;">Rotavirus Vaccine Slide Deck</h3>
+      <p style="font-size: 14px; color: #555;">Presentation slides on new-generation rotavirus vaccines and trials overview.</p>
+      <a href="resources/rotavirus-slides.pdf" download style="display: inline-block; margin-top: 12px; padding: 10px 16px; background-color: #1976d2; color: white; text-decoration: none; border-radius: 6px;">Download</a>
+    </div>
+
+    <!-- Add more cards as needed -->
+  </div>
+</section>
