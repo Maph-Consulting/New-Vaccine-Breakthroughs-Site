@@ -197,31 +197,51 @@
     text-align: center;
     flex: 1 1 300px;
   ">
- <h3 style="color: #1976d2;">📊 Vaccine Infographic Browser</h3>
-<p>Scroll through and access all available infographics below:</p>
+<h3 style="color: #1976d2;">📊 Vaccine Infographic Browser</h3>
+<p>Click below to view available infographics.</p>
 
-<div style="
-  max-height: 400px;
-  overflow-y: scroll;
+<!-- Toggle Button -->
+<button onclick="toggleInfographics()" style="
+  background-color: #1976d2;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+">
+  📂 Browse Infographics
+</button>
+
+<!-- Hidden Infographic List -->
+<div id="infographic-browser" style="
+  display: none;
+  margin-top: 16px;
+  max-height: 500px;
+  overflow-y: auto;
   border: 1px solid #ccc;
   padding: 16px;
   border-radius: 8px;
-  background: #f9f9f9;
+  background-color: #f9f9f9;
 ">
-  <ul style="list-style: none; padding: 0;">
-    <li style="margin-bottom: 12px;">
-      📄 <a href="immunobridging-infographic.pdf" target="_blank">Immunobridging and Vaccine Approval</a>
-    </li>
-    <li style="margin-bottom: 12px;">
-      📄 <a href="mrna-vaccine-infographic.pdf" target="_blank">mRNA Vaccine Basics</a>
-    </li>
-    <li style="margin-bottom: 12px;">
-      📄 <a href="cold-chain-vaccine-infographic.pdf" target="_blank">Cold Chain in Vaccine Distribution</a>
-    </li>
-    <!-- Add more files here -->
-  </ul>
+  <!-- Example Entry -->
+  <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+    <img src="thumbnails/immunobridging-thumb.png" alt="Immunobridging" style="width: 80px; border-radius: 6px;">
+    <div>
+      <strong>Immunobridging in Vaccine Approval</strong><br>
+      <a href="infographics/immunobridging-infographic.pdf" target="_blank" style="color: #1976d2;">📥 View / Download</a>
+    </div>
+  </div>
+
+  <!-- Add more entries as needed -->
 </div>
- 
+
+<!-- JavaScript -->
+<script>
+  function toggleInfographics() {
+    const browser = document.getElementById("infographic-browser");
+    browser.style.display = browser.style.display === "none" ? "block" : "none";
+  }
+</script>
 </div>  
 
   <!-- Vaccine Slides -->
