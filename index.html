@@ -292,6 +292,94 @@
   </div> 
   </div 
 </div>
+<style>
+  .horizontal-sections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 30px;
+  }
+
+  .horizontal-sections .section {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .section details summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+
+  .section details {
+    margin-top: 10px;
+  }
+
+  .section ul {
+    padding-left: 20px;
+  }
+
+  .section li {
+    margin: 6px 0;
+  }
+
+  .section a {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  .section a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<div class="horizontal-sections">
+  <!-- Infographics -->
+  <div class="section">
+    <details open>
+      <summary>📊 Vaccine Infographics</summary>
+      <ul>
+        <li><a href="immunobridging-infographic.pdf" target="_blank">Immunobridging Explained</a></li>
+        <li><a href="cold-chain-infographic.pdf" target="_blank">Cold Chain Essentials</a></li>
+        <!-- Add more links here -->
+      </ul>
+    </details>
+  </div>
+
+  <!-- Slides -->
+  <div class="section">
+    <details open>
+      <summary>📑 Vaccine Slides</summary>
+      <ul>
+        <li><a href="mrna-platform-slides.pdf" target="_blank">mRNA Vaccine Platform</a></li>
+        <li><a href="pertussis-insights-slides.pdf" target="_blank">Pertussis: Challenges & Updates</a></li>
+        <!-- Add more links here -->
+      </ul>
+    </details>
+  </div>
+
+  <!-- Useful Links -->
+  <div class="section">
+    <details open>
+      <summary>🔗 Useful Links</summary>
+      <ul>
+        <li><a href="https://www.who.int/" target="_blank">WHO</a></li>
+        <li><a href="https://www.cdc.gov/" target="_blank">CDC</a></li>
+        <li><a href="https://www.fda.gov/" target="_blank">FDA</a></li>
+        <li><a href="https://www.ecdc.europa.eu/" target="_blank">ECDC</a></li>
+        <li><a href="https://www.paho.org/" target="_blank">PAHO</a></li>
+        <li><a href="https://www.gavi.org/" target="_blank">GAVI</a></li>
+        <li><a href="https://polioeradication.org/" target="_blank">GPEI</a></li>
+      </ul>
+    </details>
+  </div>
+</div>
 
     
 </section> 
