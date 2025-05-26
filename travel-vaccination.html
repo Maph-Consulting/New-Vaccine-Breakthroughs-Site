@@ -77,6 +77,16 @@
       Your browser does not support the video tag.
     </video> -->
   </div>
+<script>
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('.animated-section').forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        section.classList.add('visible');
+      }
+    });
+  });
+</script> 
 </section>
   
     <section>
