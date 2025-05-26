@@ -32,4 +32,37 @@
 .media-container:hover video {
   transform: scale(1.03);
 }
+.animated-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.animated-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.video-section {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  color: white;
+  text-align: center;
+}
+
+.video-section video {
+  position: absolute;
+  top: 0; left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.video-section h2 {
+  margin-top: 150px;
+  font-size: 3em;
+}
 
