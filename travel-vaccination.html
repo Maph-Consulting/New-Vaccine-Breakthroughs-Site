@@ -65,10 +65,9 @@
         links to additional sources of information about travel health protection.</p>
     </section>
     
-<section class="animated-media-section">
+<section class="animated-section">
   <h2>✈️ Why Travel Vaccines Matter</h2>
   <p>Ensure your journey is safe by getting vaccinated for region-specific diseases.</p>
-  <!-- Animated GIF or Video -->
   <div class="media-container">
     <img src="images/travel-vaccine-animation.gif" alt="Animated Travel Vaccine Graphic">
     <!-- OR use a video:
@@ -80,15 +79,21 @@
 </section>  
     
 <script>
-  window.addEventListener('scroll', () => {
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Optional
+        }
+      });
+    }, { threshold: 0.1 });
+
     document.querySelectorAll('.animated-section').forEach(section => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        section.classList.add('visible');
-      }
+      observer.observe(section);
     });
   });
-</script> 
+</script>
 </section>
   
     <section>
