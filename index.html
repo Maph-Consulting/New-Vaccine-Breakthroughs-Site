@@ -377,44 +377,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Subscribe to New Vaccine Breakthroughs</title                                   
 </head> 
-<body>  
+
 </body> 
-<div class="subscribe-card">
-  <h2>Join Our Community</h2>
-  <form id="newsletterForm">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required>
+<div class="subscribe-form">
+    <h2>Subscribe to New Vaccine Breakthroughs</h2>
+    <form id="newsletterForm">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required>
 
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" required>
-    <!-- hidden date field -->
-    <input type="hidden" id="date_submitted" name="date_submitted">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required>
 
-    <button type="submit">Subscribe Now</button>
-  </form>
-</div>
-<script>
-  // auto-fill date
-  document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("date_submitted").value = new Date().toISOString();
-  });
+      <input type="hidden" id="date_submitted" name="date_submitted">
 
-  // unified submit handler (Zapier + redirect)
-  document.getElementById("newsletterForm").addEventListener("submit", async e => {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-    try {
-      await fetch("https://hooks.zapier.com/hooks/catch/22802972/2n6ziul/", {
-        method: "POST",
-        body: data
+      <button type="submit">Subscribe Now</button>
+    </form>
+  </div>
+
+  <script>
+    // Auto-fill the submission date when the page loads
+    document.addEventListener("DOMContentLoaded", () => {
+      const dateField = document.getElementById("date_submitted");
+      if (dateField) {
+        dateField.value = new Date().toISOString();
+      }
+    });
+
+    // Handle the form submission
+    document.getElementById("newsletterForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const form = e.target;
+      const data = new FormData(form);
+      const jsonData = {};
+
+      // Convert FormData to JSON object
+      data.forEach((value, key) => {
+        jsonData[key] = value;
       });
-      window.location.href = "/thank-you.html";
-    } catch (err) {
-      alert("Submission failed—please try again.");
-    }
-  });
-</script>
+
+      try {
+        const response = await fetch("https://hooks.zapier.com/hooks/catch/22802972/2n6ziul/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(jsonData)
+        });
+
+        if (response.ok) {
+          window.location.href = "/thank-you.html";
+        } else {
+          alert("Submission failed. Please try again later.");
+        }
+      } catch (error) {
+        alert("Submission failed—please try again.");
+        console.error("Error:", error);
+      }
+    });
+  </script>
+</body>
 </html>
 
 </form>
